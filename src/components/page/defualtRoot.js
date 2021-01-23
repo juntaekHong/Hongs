@@ -1,12 +1,12 @@
 import { useEffect } from "react"
 import { navigate } from "gatsby"
 
-const Index = props => {
+const DefaultRoot = props => {
   useEffect(() => {
-    navigate("/app")
+    navigate("/app/main")
   }, [])
 
   return null
 }
 
-export default Index
+export default DefaultRoot

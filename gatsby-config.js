@@ -30,5 +30,13 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+
+    // 정적으로 렌더링 된 페이지와 "클라이언트 경로"가 모두 포함 된 "하이브리드" Gatsby 앱을 간단하게 만들게 해주는 역할, 이러한 경로는 클라이언트에만 존재.
+    {
+      resolve: `gatsby-plugin-create-client-paths`,
+      options: { prefixes: [`/app/*`] },
+    },
+    // gatsby에서 styled-components 적용
+    `gatsby-plugin-styled-components`,
   ],
 }
