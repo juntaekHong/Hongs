@@ -20,6 +20,7 @@ const Main = props => {
   return (
     <Layout>
       <SettingDialog
+        _windowWidth={_windowWidth}
         open={settingPopup}
         onClose={() => setSettingPopup(false)}
       />
