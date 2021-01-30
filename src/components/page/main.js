@@ -4,7 +4,7 @@ import { IconButton } from "@material-ui/core"
 
 import Layout from "../component/Area/layout"
 import Header from "../component/Area/header"
-import MenuDialog from "../component/MenuDialog"
+import MenuDialog from "../component/menuDialog"
 import SettingDialog from "../component/settingDiaolog"
 
 import styled from "styled-components"
