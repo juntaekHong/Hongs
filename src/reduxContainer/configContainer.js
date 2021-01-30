@@ -3,14 +3,16 @@ import { compose } from "redux"
 import { connect } from "react-redux"
 import * as ConfigAction from "../components/apiContainer/config"
 
-const { setWidth } = ConfigAction
+const { setWidth, setMenu } = ConfigAction
 
 const mapStateToProps = state => ({
   _windowWidth: state.ConfigReducer._windowWidth,
+  _menuList: state.ConfigReducer._menuList,
 })
 
 const mapDispatchToProps = dispatch => ({
   setWidth: param => dispatch(setWidth(param)),
+  setMenu: param => dispatch(setMenu(param)),
 })
 
 const WithMainHoc = ChildComponent => props => {

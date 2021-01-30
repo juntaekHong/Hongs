@@ -27,7 +27,6 @@ const Transition = React.forwardRef((props, ref) => (
 const SettingDialog = props => {
   const classes = useStyles()
 
-  const { _windowWidth } = props
   const { open, onClose } = props
 
   const darkMode = useDarkMode(false)
