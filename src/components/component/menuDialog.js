@@ -8,7 +8,7 @@ import useDarkMode from "use-dark-mode"
 
 import ReactDragList from "react-drag-list"
 
-import ConfigContainer from "../../../reduxContainer/configContainer"
+import ConfigContainer from "../../reduxContainer/configContainer"
 
 const useStyles = makeStyles(theme => ({
   container: {
