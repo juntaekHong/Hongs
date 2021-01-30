@@ -17,23 +17,27 @@ const Header = props => {
       }}
     >
       {leftComponent ? (
-        <div style={{ position: "absolute", left: 10, top: 0, ...leftStyle }}>
+        <section
+          style={{ position: "absolute", left: 10, top: 0, ...leftStyle }}
+        >
           {leftComponent}
-        </div>
+        </section>
       ) : null}
 
-      <div
+      <section
         style={{
           ...titleStyle,
         }}
       >
         {title}
-      </div>
+      </section>
 
       {rightComponent ? (
-        <div style={{ position: "absolute", right: 10, top: 0, ...rightStyle }}>
+        <section
+          style={{ position: "absolute", right: 10, top: 0, ...rightStyle }}
+        >
           {rightComponent}
-        </div>
+        </section>
       ) : null}
     </div>
   )

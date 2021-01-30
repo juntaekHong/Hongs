@@ -36,7 +36,16 @@ module.exports = {
       resolve: `gatsby-plugin-create-client-paths`,
       options: { prefixes: [`/app/*`] },
     },
-    // gatsby에서 styled-components 적용
+    // meterial-ui 템플릿 적용
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        stylesProvider: {
+          injectFirst: true,
+        },
+      },
+    },
+    // gatsby에서 styled-components 적용, * meterial-ui에 styled-components적용을 위해 meterial-ui 플러그인 아래에 넣어야함.
     `gatsby-plugin-styled-components`,
   ],
 }
