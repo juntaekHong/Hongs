@@ -1,20 +1,16 @@
 import React from "react"
 import { compose } from "redux"
 import { connect } from "react-redux"
+import * as ConfigAction from "../components/apiContainer/config"
 
-import * as SampleAction from "../components/apiContainer/sample"
-
-const { requestPlus, requestMinus } = SampleAction
+const { setWidth } = ConfigAction
 
 const mapStateToProps = state => ({
-  number: state.SampleReducer.number,
-
   _windowWidth: state.ConfigReducer._windowWidth,
 })
 
 const mapDispatchToProps = dispatch => ({
-  requestPlus: param => dispatch(requestPlus(param)),
-  requestMinus: param => dispatch(requestMinus(param)),
+  setWidth: param => dispatch(setWidth(param)),
 })
 
 const WithMainHoc = ChildComponent => props => {

@@ -2,7 +2,6 @@ import React from "react"
 
 const Header = props => {
   const { leftStyle, titleStyle, rightStyle } = props
-
   const { title, leftComponent, rightComponent } = props
 
   return (
@@ -14,31 +13,45 @@ const Header = props => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+
+        height: "60px",
       }}
     >
-      {leftComponent ? (
-        <section
-          style={{ position: "absolute", left: 10, top: 0, ...leftStyle }}
-        >
-          {leftComponent}
-        </section>
-      ) : null}
+      <section
+        style={{
+          flex: 1,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "flex-start",
+          ...leftStyle,
+        }}
+      >
+        {leftComponent}
+      </section>
 
       <section
         style={{
+          flex: 4,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
           ...titleStyle,
         }}
       >
         {title}
       </section>
 
-      {rightComponent ? (
-        <section
-          style={{ position: "absolute", right: 10, top: 0, ...rightStyle }}
-        >
-          {rightComponent}
-        </section>
-      ) : null}
+      <section
+        style={{
+          flex: 1,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "flex-end",
+          ...rightStyle,
+        }}
+      >
+        {rightComponent}
+      </section>
     </div>
   )
 }

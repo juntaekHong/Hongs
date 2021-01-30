@@ -6,8 +6,8 @@ import { createAction, handleActions } from "redux-actions"
 const NUMBER_INCREMENT = "@Hongs/sample/NUMBER_INCREMENT"
 const NUMBER_DECREMENT = "@Hongs/sample/NUMBER_DECREMENT"
 
-export const incrementNumber = createAction(NUMBER_INCREMENT)
-export const decrementNumber = createAction(NUMBER_DECREMENT)
+const incrementNumber = createAction(NUMBER_INCREMENT)
+const decrementNumber = createAction(NUMBER_DECREMENT)
 
 // redux-state
 const initState = {
