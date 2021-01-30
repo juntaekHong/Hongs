@@ -10,6 +10,7 @@ import styled from "styled-components"
 import SampleContainer from "../../reduxContainer/sampleContainer"
 
 import icon_setting from "../../images/settings.png"
+import DarkMode from "../component/darkMode"
 
 const Main = props => {
   // const { _windowWidth } = props
@@ -22,13 +23,14 @@ const Main = props => {
         title={"제목만 있는 상단 바"}
         rightComponent={
           <div>
-            <SettingButton onClick={() => {}}>
+            {/* <SettingButton onClick={() => {}}>
               <img
                 style={{ width: "50px", height: "50px" }}
                 src={icon_setting}
                 alt={"설정 아이콘"}
               />
-            </SettingButton>
+            </SettingButton> */}
+            <DarkMode />
           </div>
         }
       />

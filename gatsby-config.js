@@ -47,5 +47,7 @@ module.exports = {
     },
     // gatsby에서 styled-components 적용, * meterial-ui에 styled-components적용을 위해 meterial-ui 플러그인 아래에 넣어야함.
     `gatsby-plugin-styled-components`,
+    // 다크모드 모듈 설정
+    "gatsby-plugin-use-dark-mode",
   ],
 }

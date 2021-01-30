@@ -19,6 +19,7 @@
     "gatsby-plugin-react-helmet": "^3.4.0",
     "gatsby-plugin-sharp": "^2.8.0",
     "gatsby-plugin-styled-components": "^3.9.0",
+    "gatsby-plugin-use-dark-mode": "^1.2.0",
     "gatsby-source-filesystem": "^2.5.0",
     "gatsby-transformer-sharp": "^2.6.0",
     "prop-types": "^15.7.2",
@@ -33,7 +34,8 @@
     "redux-pender": "^2.0.12",
     "redux-persist": "^6.0.0",
     "redux-thunk": "^2.3.0",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.2.1",
+    "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
     "prettier": "2.2.1"
