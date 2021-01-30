@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 
 import { IconButton } from "@material-ui/core"
 
@@ -9,29 +9,26 @@ import styled from "styled-components"
 
 import SampleContainer from "../../reduxContainer/sampleContainer"
 
-import icon_setting from "../../images/settings.png"
-import DarkMode from "../component/darkMode"
+import SettingsIcon from "@material-ui/icons/Settings"
+import SettingDialog from "../component/settingDiaolog"
 
 const Main = props => {
-  // const { _windowWidth } = props
+  const { _windowWidth } = props
 
-  // console.log("window innerWidth: ", _windowWidth)
+  const [settingPopup, setSettingPopup] = useState(false)
 
   return (
     <Layout>
+      <SettingDialog
+        open={settingPopup}
+        onClose={() => setSettingPopup(false)}
+      />
       <Header
-        title={"제목만 있는 상단 바"}
+        title={"설계 구조 작업중"}
         rightComponent={
-          <div>
-            {/* <SettingButton onClick={() => {}}>
-              <img
-                style={{ width: "50px", height: "50px" }}
-                src={icon_setting}
-                alt={"설정 아이콘"}
-              />
-            </SettingButton> */}
-            <DarkMode />
-          </div>
+          <SettingButton onClick={() => setSettingPopup(true)}>
+            <SettingsIcon />
+          </SettingButton>
         }
       />
       메인 페이지, 컨텐츠 설정중입니다.
@@ -42,7 +39,10 @@ const Main = props => {
 export default SampleContainer(Main)
 
 const SettingButton = styled(IconButton)`
+  z-index: 100;
   margin: 0;
   padding: 0;
-  border-radius: 25px;
+  border-radius: 15px;
+  width: 30px;
+  height: 30px;
 `

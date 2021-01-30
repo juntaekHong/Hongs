@@ -7,8 +7,6 @@ const Header = props => {
   return (
     <div
       style={{
-        position: "relative",
-
         width: "100%",
         display: "flex",
         justifyContent: "center",
