@@ -6,6 +6,8 @@ import styled from "styled-components"
 
 import useDarkMode from "use-dark-mode"
 
+import ReactDragList from "react-drag-list"
+
 import ConfigContainer from "../../../reduxContainer/configContainer"
 
 const useStyles = makeStyles(theme => ({
@@ -59,8 +61,13 @@ const MenuDialog = props => {
         <div style={{ paddingLeft: "60px" }}>
           <CutomTextButton
             isDark={darkMode.value}
-            text={`순서변경 ${changeMode ? "OFF" : "ON"}`}
-            onClick={() => setChangeMode(!changeMode)}
+            text={`순서변경 ${changeMode ? "적용하기" : "ON"}`}
+            onClick={async () => {
+              setChangeMode(!changeMode)
+
+              // 순서 변경 적용
+              if (changeMode) await setMenu(tempMenuList)
+            }}
           />
         </div>
 
@@ -78,7 +85,14 @@ const MenuDialog = props => {
           : null}
 
         {/* 메뉴 순서 변경 모드 */}
-        {changeMode ? <div></div> : null}
+        {changeMode ? (
+          <div>
+            <ReactDragList
+              dataSource={tempMenuList}
+              row={(record, index) => <div>{record.title}</div>}
+            />
+          </div>
+        ) : null}
       </div>
     </Dialog>
   )
