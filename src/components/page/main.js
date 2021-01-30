@@ -12,7 +12,9 @@ import SampleContainer from "../../reduxContainer/sampleContainer"
 import icon_setting from "../../images/settings.png"
 
 const Main = props => {
-  const { number, requestPlus, requestMinus } = props
+  const { number } = props
+
+  console.log("redux setting test: ", number)
 
   return (
     <Layout>
@@ -20,11 +22,7 @@ const Main = props => {
         title={"제목만 있는 상단 바"}
         rightComponent={
           <div>
-            <SettingButton
-              onClick={() => {
-                requestPlus()
-              }}
-            >
+            <SettingButton onClick={() => {}}>
               <img
                 style={{ width: "50px", height: "50px" }}
                 src={icon_setting}
