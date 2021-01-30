@@ -7,7 +7,7 @@ const Layout = props => {
   const { children } = props
 
   return (
-    <div style={{ width: "100%", height: "100%", backgroundColor: "#fff" }}>
+    <div>
       <StylesProvider injectFirst>{children}</StylesProvider>
     </div>
   )

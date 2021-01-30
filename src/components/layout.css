@@ -595,3 +595,24 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+body > #root > div {
+  height: 100vh;
+}
+
+/* custom-start */
+
+/* 웹 페이지 높이 100% 사용하는 코드 */
+html,
+body,
+#___gatsby,
+#gatsby-focus-wrapper {
+  height: 100%;
+  font-family: NanumSquareNormal;
+  font-size: 16px;
+}
+body {
+  margin: 0px;
+}
+
+/* custom-end */
