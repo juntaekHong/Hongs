@@ -7,7 +7,7 @@ import * as SampleAction from "../components/apiContainer/sample"
 const { requestPlus, requestMinus } = SampleAction
 
 const mapStateToProps = state => ({
-  number: state.SampleReducer.number,
+  _number: state.SampleReducer._number,
 
   _windowWidth: state.ConfigReducer._windowWidth,
 })

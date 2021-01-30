@@ -12,9 +12,9 @@ import SampleContainer from "../../reduxContainer/sampleContainer"
 import icon_setting from "../../images/settings.png"
 
 const Main = props => {
-  const { _windowWidth } = props
+  // const { _windowWidth } = props
 
-  console.log("window innerWidth: ", _windowWidth)
+  // console.log("window innerWidth: ", _windowWidth)
 
   return (
     <Layout>

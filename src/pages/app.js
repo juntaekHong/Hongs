@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useEffect } from "react"
 import { Router } from "@reach/router"
 
 import DefaultRoot from "../components/page/defualtRoot"
@@ -8,7 +8,7 @@ import Page404 from "./404"
 import ConfigContainer from "../reduxContainer/configContainer"
 
 const App = props => {
-  const { setWidth, _windowWidth } = props
+  const { setWidth } = props
 
   useEffect(() => {
     setWidth(window.innerWidth)

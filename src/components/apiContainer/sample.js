@@ -11,7 +11,7 @@ const decrementNumber = createAction(NUMBER_DECREMENT)
 
 // redux-state
 const initState = {
-  number: 0,
+  _number: 0,
 }
 
 // api 호출 및 dispatch 부분
@@ -40,11 +40,11 @@ export default handleActions(
   {
     [NUMBER_INCREMENT]: (state, action) => ({
       ...state,
-      number: state.number + 1,
+      _number: state._number + 1,
     }),
     [NUMBER_DECREMENT]: (state, action) => ({
       ...state,
-      number: state.number - 1,
+      _number: state._number - 1,
     }),
   },
   initState
